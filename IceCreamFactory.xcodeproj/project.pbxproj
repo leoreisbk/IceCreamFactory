@@ -1,0 +1,738 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		1F807A4620F04E500050B8DE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F807A4520F04E500050B8DE /* AppDelegate.swift */; };
+		1F807A4820F04E500050B8DE /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F807A4720F04E500050B8DE /* ViewController.swift */; };
+		1F807A4B20F04E500050B8DE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1F807A4920F04E500050B8DE /* Main.storyboard */; };
+		1F807A4D20F04E520050B8DE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1F807A4C20F04E520050B8DE /* Assets.xcassets */; };
+		1F807A5020F04E520050B8DE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1F807A4E20F04E520050B8DE /* LaunchScreen.storyboard */; };
+		1F807A5B20F04E520050B8DE /* IceCreamFactoryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F807A5A20F04E520050B8DE /* IceCreamFactoryTests.swift */; };
+		1F807A6620F04E520050B8DE /* IceCreamFactoryUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F807A6520F04E520050B8DE /* IceCreamFactoryUITests.swift */; };
+		1F807A7420F04FC10050B8DE /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1F807A7320F04FC10050B8DE /* GoogleService-Info.plist */; };
+		1F807A7620F0FB490050B8DE /* IceCreamListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F807A7520F0FB490050B8DE /* IceCreamListTableViewController.swift */; };
+		1F807A7820F0FB790050B8DE /* IceCreamItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F807A7720F0FB790050B8DE /* IceCreamItem.swift */; };
+		1F807A7A20F102730050B8DE /* IceCreamFormViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F807A7920F102730050B8DE /* IceCreamFormViewController.swift */; };
+		1F807A7C20F162DF0050B8DE /* IceCreamTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F807A7B20F162DF0050B8DE /* IceCreamTableViewCell.swift */; };
+		5B7F640902720082AEA9F58C /* Pods_IceCreamFactoryTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE2CCB3E30E18789AED3ED74 /* Pods_IceCreamFactoryTests.framework */; };
+		AF59E0E87E80E54DD915A9CF /* Pods_IceCreamFactory.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 02A72CEA1A88A02F0E4BAB26 /* Pods_IceCreamFactory.framework */; };
+		D505D86B3C74FCD32FD2BACD /* Pods_IceCreamFactoryUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FEFA6A1826852E45EFA522D6 /* Pods_IceCreamFactoryUITests.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		1F807A5720F04E520050B8DE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1F807A3A20F04E500050B8DE /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 1F807A4120F04E500050B8DE;
+			remoteInfo = IceCreamFactory;
+		};
+		1F807A6220F04E520050B8DE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1F807A3A20F04E500050B8DE /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 1F807A4120F04E500050B8DE;
+			remoteInfo = IceCreamFactory;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		02A72CEA1A88A02F0E4BAB26 /* Pods_IceCreamFactory.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_IceCreamFactory.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		10B7971750BAECE5B3020FC0 /* Pods-IceCreamFactoryUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IceCreamFactoryUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-IceCreamFactoryUITests/Pods-IceCreamFactoryUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		14BE8F85836D02E664FE90D1 /* Pods-IceCreamFactory.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IceCreamFactory.release.xcconfig"; path = "Pods/Target Support Files/Pods-IceCreamFactory/Pods-IceCreamFactory.release.xcconfig"; sourceTree = "<group>"; };
+		1F807A4220F04E500050B8DE /* IceCreamFactory.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = IceCreamFactory.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		1F807A4520F04E500050B8DE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		1F807A4720F04E500050B8DE /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		1F807A4A20F04E500050B8DE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		1F807A4C20F04E520050B8DE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		1F807A4F20F04E520050B8DE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		1F807A5120F04E520050B8DE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1F807A5620F04E520050B8DE /* IceCreamFactoryTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = IceCreamFactoryTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		1F807A5A20F04E520050B8DE /* IceCreamFactoryTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IceCreamFactoryTests.swift; sourceTree = "<group>"; };
+		1F807A5C20F04E520050B8DE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1F807A6120F04E520050B8DE /* IceCreamFactoryUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = IceCreamFactoryUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		1F807A6520F04E520050B8DE /* IceCreamFactoryUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IceCreamFactoryUITests.swift; sourceTree = "<group>"; };
+		1F807A6720F04E520050B8DE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1F807A7320F04FC10050B8DE /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		1F807A7520F0FB490050B8DE /* IceCreamListTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IceCreamListTableViewController.swift; sourceTree = "<group>"; };
+		1F807A7720F0FB790050B8DE /* IceCreamItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IceCreamItem.swift; sourceTree = "<group>"; };
+		1F807A7920F102730050B8DE /* IceCreamFormViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IceCreamFormViewController.swift; sourceTree = "<group>"; };
+		1F807A7B20F162DF0050B8DE /* IceCreamTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IceCreamTableViewCell.swift; sourceTree = "<group>"; };
+		42FBD518F18375A161162807 /* Pods-IceCreamFactoryTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IceCreamFactoryTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-IceCreamFactoryTests/Pods-IceCreamFactoryTests.release.xcconfig"; sourceTree = "<group>"; };
+		953C8AFCB29795E7C0E47679 /* Pods-IceCreamFactory.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IceCreamFactory.debug.xcconfig"; path = "Pods/Target Support Files/Pods-IceCreamFactory/Pods-IceCreamFactory.debug.xcconfig"; sourceTree = "<group>"; };
+		9FDD7B45202682994E4DEFB8 /* Pods-IceCreamFactoryUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IceCreamFactoryUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-IceCreamFactoryUITests/Pods-IceCreamFactoryUITests.release.xcconfig"; sourceTree = "<group>"; };
+		CE2CCB3E30E18789AED3ED74 /* Pods_IceCreamFactoryTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_IceCreamFactoryTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FD77AFDA80C33DA1185D3EFF /* Pods-IceCreamFactoryTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IceCreamFactoryTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-IceCreamFactoryTests/Pods-IceCreamFactoryTests.debug.xcconfig"; sourceTree = "<group>"; };
+		FEFA6A1826852E45EFA522D6 /* Pods_IceCreamFactoryUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_IceCreamFactoryUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		1F807A3F20F04E500050B8DE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AF59E0E87E80E54DD915A9CF /* Pods_IceCreamFactory.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1F807A5320F04E520050B8DE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5B7F640902720082AEA9F58C /* Pods_IceCreamFactoryTests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1F807A5E20F04E520050B8DE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D505D86B3C74FCD32FD2BACD /* Pods_IceCreamFactoryUITests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		1F807A3920F04E500050B8DE = {
+			isa = PBXGroup;
+			children = (
+				1F807A4420F04E500050B8DE /* IceCreamFactory */,
+				1F807A5920F04E520050B8DE /* IceCreamFactoryTests */,
+				1F807A6420F04E520050B8DE /* IceCreamFactoryUITests */,
+				1F807A4320F04E500050B8DE /* Products */,
+				6D90E0B26DAD2D87E3E5FE0D /* Pods */,
+				7B885D257D59CF35C28170C6 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		1F807A4320F04E500050B8DE /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				1F807A4220F04E500050B8DE /* IceCreamFactory.app */,
+				1F807A5620F04E520050B8DE /* IceCreamFactoryTests.xctest */,
+				1F807A6120F04E520050B8DE /* IceCreamFactoryUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		1F807A4420F04E500050B8DE /* IceCreamFactory */ = {
+			isa = PBXGroup;
+			children = (
+				1F807A4520F04E500050B8DE /* AppDelegate.swift */,
+				1F807A4720F04E500050B8DE /* ViewController.swift */,
+				1F807A4920F04E500050B8DE /* Main.storyboard */,
+				1F807A4C20F04E520050B8DE /* Assets.xcassets */,
+				1F807A4E20F04E520050B8DE /* LaunchScreen.storyboard */,
+				1F807A7320F04FC10050B8DE /* GoogleService-Info.plist */,
+				1F807A5120F04E520050B8DE /* Info.plist */,
+				1F807A7520F0FB490050B8DE /* IceCreamListTableViewController.swift */,
+				1F807A7720F0FB790050B8DE /* IceCreamItem.swift */,
+				1F807A7920F102730050B8DE /* IceCreamFormViewController.swift */,
+				1F807A7B20F162DF0050B8DE /* IceCreamTableViewCell.swift */,
+			);
+			path = IceCreamFactory;
+			sourceTree = "<group>";
+		};
+		1F807A5920F04E520050B8DE /* IceCreamFactoryTests */ = {
+			isa = PBXGroup;
+			children = (
+				1F807A5A20F04E520050B8DE /* IceCreamFactoryTests.swift */,
+				1F807A5C20F04E520050B8DE /* Info.plist */,
+			);
+			path = IceCreamFactoryTests;
+			sourceTree = "<group>";
+		};
+		1F807A6420F04E520050B8DE /* IceCreamFactoryUITests */ = {
+			isa = PBXGroup;
+			children = (
+				1F807A6520F04E520050B8DE /* IceCreamFactoryUITests.swift */,
+				1F807A6720F04E520050B8DE /* Info.plist */,
+			);
+			path = IceCreamFactoryUITests;
+			sourceTree = "<group>";
+		};
+		6D90E0B26DAD2D87E3E5FE0D /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				953C8AFCB29795E7C0E47679 /* Pods-IceCreamFactory.debug.xcconfig */,
+				14BE8F85836D02E664FE90D1 /* Pods-IceCreamFactory.release.xcconfig */,
+				FD77AFDA80C33DA1185D3EFF /* Pods-IceCreamFactoryTests.debug.xcconfig */,
+				42FBD518F18375A161162807 /* Pods-IceCreamFactoryTests.release.xcconfig */,
+				10B7971750BAECE5B3020FC0 /* Pods-IceCreamFactoryUITests.debug.xcconfig */,
+				9FDD7B45202682994E4DEFB8 /* Pods-IceCreamFactoryUITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		7B885D257D59CF35C28170C6 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				02A72CEA1A88A02F0E4BAB26 /* Pods_IceCreamFactory.framework */,
+				CE2CCB3E30E18789AED3ED74 /* Pods_IceCreamFactoryTests.framework */,
+				FEFA6A1826852E45EFA522D6 /* Pods_IceCreamFactoryUITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		1F807A4120F04E500050B8DE /* IceCreamFactory */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1F807A6A20F04E520050B8DE /* Build configuration list for PBXNativeTarget "IceCreamFactory" */;
+			buildPhases = (
+				28F60C6F75F168C4B7DB839D /* [CP] Check Pods Manifest.lock */,
+				1F807A3E20F04E500050B8DE /* Sources */,
+				1F807A3F20F04E500050B8DE /* Frameworks */,
+				1F807A4020F04E500050B8DE /* Resources */,
+				B8D58053C3C3A668CE755B4E /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = IceCreamFactory;
+			productName = IceCreamFactory;
+			productReference = 1F807A4220F04E500050B8DE /* IceCreamFactory.app */;
+			productType = "com.apple.product-type.application";
+		};
+		1F807A5520F04E520050B8DE /* IceCreamFactoryTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1F807A6D20F04E520050B8DE /* Build configuration list for PBXNativeTarget "IceCreamFactoryTests" */;
+			buildPhases = (
+				229F72B718413F897D6D3AE2 /* [CP] Check Pods Manifest.lock */,
+				1F807A5220F04E520050B8DE /* Sources */,
+				1F807A5320F04E520050B8DE /* Frameworks */,
+				1F807A5420F04E520050B8DE /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				1F807A5820F04E520050B8DE /* PBXTargetDependency */,
+			);
+			name = IceCreamFactoryTests;
+			productName = IceCreamFactoryTests;
+			productReference = 1F807A5620F04E520050B8DE /* IceCreamFactoryTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		1F807A6020F04E520050B8DE /* IceCreamFactoryUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1F807A7020F04E520050B8DE /* Build configuration list for PBXNativeTarget "IceCreamFactoryUITests" */;
+			buildPhases = (
+				35C5502541EBBBF5EFA6AE9B /* [CP] Check Pods Manifest.lock */,
+				1F807A5D20F04E520050B8DE /* Sources */,
+				1F807A5E20F04E520050B8DE /* Frameworks */,
+				1F807A5F20F04E520050B8DE /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				1F807A6320F04E520050B8DE /* PBXTargetDependency */,
+			);
+			name = IceCreamFactoryUITests;
+			productName = IceCreamFactoryUITests;
+			productReference = 1F807A6120F04E520050B8DE /* IceCreamFactoryUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		1F807A3A20F04E500050B8DE /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0940;
+				LastUpgradeCheck = 0940;
+				ORGANIZATIONNAME = "Leonardo Reis";
+				TargetAttributes = {
+					1F807A4120F04E500050B8DE = {
+						CreatedOnToolsVersion = 9.4;
+					};
+					1F807A5520F04E520050B8DE = {
+						CreatedOnToolsVersion = 9.4;
+						TestTargetID = 1F807A4120F04E500050B8DE;
+					};
+					1F807A6020F04E520050B8DE = {
+						CreatedOnToolsVersion = 9.4;
+						TestTargetID = 1F807A4120F04E500050B8DE;
+					};
+				};
+			};
+			buildConfigurationList = 1F807A3D20F04E500050B8DE /* Build configuration list for PBXProject "IceCreamFactory" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 1F807A3920F04E500050B8DE;
+			productRefGroup = 1F807A4320F04E500050B8DE /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				1F807A4120F04E500050B8DE /* IceCreamFactory */,
+				1F807A5520F04E520050B8DE /* IceCreamFactoryTests */,
+				1F807A6020F04E520050B8DE /* IceCreamFactoryUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		1F807A4020F04E500050B8DE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1F807A5020F04E520050B8DE /* LaunchScreen.storyboard in Resources */,
+				1F807A7420F04FC10050B8DE /* GoogleService-Info.plist in Resources */,
+				1F807A4D20F04E520050B8DE /* Assets.xcassets in Resources */,
+				1F807A4B20F04E500050B8DE /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1F807A5420F04E520050B8DE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1F807A5F20F04E520050B8DE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		229F72B718413F897D6D3AE2 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-IceCreamFactoryTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		28F60C6F75F168C4B7DB839D /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-IceCreamFactory-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		35C5502541EBBBF5EFA6AE9B /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-IceCreamFactoryUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B8D58053C3C3A668CE755B4E /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-IceCreamFactory/Pods-IceCreamFactory-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
+				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
+				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-IceCreamFactory/Pods-IceCreamFactory-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		1F807A3E20F04E500050B8DE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1F807A7C20F162DF0050B8DE /* IceCreamTableViewCell.swift in Sources */,
+				1F807A4820F04E500050B8DE /* ViewController.swift in Sources */,
+				1F807A7820F0FB790050B8DE /* IceCreamItem.swift in Sources */,
+				1F807A7620F0FB490050B8DE /* IceCreamListTableViewController.swift in Sources */,
+				1F807A7A20F102730050B8DE /* IceCreamFormViewController.swift in Sources */,
+				1F807A4620F04E500050B8DE /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1F807A5220F04E520050B8DE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1F807A5B20F04E520050B8DE /* IceCreamFactoryTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1F807A5D20F04E520050B8DE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1F807A6620F04E520050B8DE /* IceCreamFactoryUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		1F807A5820F04E520050B8DE /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 1F807A4120F04E500050B8DE /* IceCreamFactory */;
+			targetProxy = 1F807A5720F04E520050B8DE /* PBXContainerItemProxy */;
+		};
+		1F807A6320F04E520050B8DE /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 1F807A4120F04E500050B8DE /* IceCreamFactory */;
+			targetProxy = 1F807A6220F04E520050B8DE /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		1F807A4920F04E500050B8DE /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				1F807A4A20F04E500050B8DE /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		1F807A4E20F04E520050B8DE /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				1F807A4F20F04E520050B8DE /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		1F807A6820F04E520050B8DE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		1F807A6920F04E520050B8DE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		1F807A6B20F04E520050B8DE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 953C8AFCB29795E7C0E47679 /* Pods-IceCreamFactory.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = LMJ6674UP5;
+				INFOPLIST_FILE = IceCreamFactory/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.leonardoreis.IceCreamFactory;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		1F807A6C20F04E520050B8DE /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 14BE8F85836D02E664FE90D1 /* Pods-IceCreamFactory.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = LMJ6674UP5;
+				INFOPLIST_FILE = IceCreamFactory/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.leonardoreis.IceCreamFactory;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		1F807A6E20F04E520050B8DE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = FD77AFDA80C33DA1185D3EFF /* Pods-IceCreamFactoryTests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = LMJ6674UP5;
+				INFOPLIST_FILE = IceCreamFactoryTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.leonardoreis.IceCreamFactoryTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/IceCreamFactory.app/IceCreamFactory";
+			};
+			name = Debug;
+		};
+		1F807A6F20F04E520050B8DE /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 42FBD518F18375A161162807 /* Pods-IceCreamFactoryTests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = LMJ6674UP5;
+				INFOPLIST_FILE = IceCreamFactoryTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.leonardoreis.IceCreamFactoryTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/IceCreamFactory.app/IceCreamFactory";
+			};
+			name = Release;
+		};
+		1F807A7120F04E520050B8DE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 10B7971750BAECE5B3020FC0 /* Pods-IceCreamFactoryUITests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = LMJ6674UP5;
+				INFOPLIST_FILE = IceCreamFactoryUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.leonardoreis.IceCreamFactoryUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = IceCreamFactory;
+			};
+			name = Debug;
+		};
+		1F807A7220F04E520050B8DE /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9FDD7B45202682994E4DEFB8 /* Pods-IceCreamFactoryUITests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = LMJ6674UP5;
+				INFOPLIST_FILE = IceCreamFactoryUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.leonardoreis.IceCreamFactoryUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = IceCreamFactory;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		1F807A3D20F04E500050B8DE /* Build configuration list for PBXProject "IceCreamFactory" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1F807A6820F04E520050B8DE /* Debug */,
+				1F807A6920F04E520050B8DE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1F807A6A20F04E520050B8DE /* Build configuration list for PBXNativeTarget "IceCreamFactory" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1F807A6B20F04E520050B8DE /* Debug */,
+				1F807A6C20F04E520050B8DE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1F807A6D20F04E520050B8DE /* Build configuration list for PBXNativeTarget "IceCreamFactoryTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1F807A6E20F04E520050B8DE /* Debug */,
+				1F807A6F20F04E520050B8DE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1F807A7020F04E520050B8DE /* Build configuration list for PBXNativeTarget "IceCreamFactoryUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1F807A7120F04E520050B8DE /* Debug */,
+				1F807A7220F04E520050B8DE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 1F807A3A20F04E500050B8DE /* Project object */;
+}
