@@ -15,6 +15,8 @@ class IceCreamListTableViewController: UIViewController {
 	let IceCreamSegue = "IceCreamSegue"
 	let IceCreamDatabasePath = "icecream-items"
 
+	var presenter: ViewToPresenterProtocol?
+
 	var items: [IceCreamItem] = []
 	var ref: DatabaseReference!
 
@@ -25,35 +27,36 @@ class IceCreamListTableViewController: UIViewController {
 	}
 
 
-	override func viewWillAppear(_ animated: Bool) {
-		super.viewWillAppear(animated)
-		ref.observe(.value, with: { snapshot in
-			var newItems: [IceCreamItem] = []
-			for child in snapshot.children {
-				if let snapshot = child as? DataSnapshot,
-					let groceryItem = IceCreamItem(snapshot: snapshot) {
-					newItems.append(groceryItem)
-				}
-			}
-			self.items = newItems
-			self.tableView.reloadData()
-		})
-	}
+//	override func viewWillAppear(_ animated: Bool) {
+//		super.viewWillAppear(animated)
+//		ref.observe(.value, with: { snapshot in
+//			var newItems: [IceCreamItem] = []
+//			for child in snapshot.children {
+//				if let snapshot = child as? DataSnapshot,
+//					let groceryItem = IceCreamItem(snapshot: snapshot) {
+//					newItems.append(groceryItem)
+//				}
+//			}
+//			self.items = newItems
+//			self.tableView.reloadData()
+//		})
+//	}
 
 	override func viewDidLoad() {
 		super.viewDidLoad()
-		ref = Database.database().reference(withPath: IceCreamDatabasePath)
-		ref.queryOrdered(byChild: "name").observe(.value, with: { snapshot in
-			var newItems: [IceCreamItem] = []
-			for child in snapshot.children {
-				if let snapshot = child as? DataSnapshot,
-					let icecreamItem = IceCreamItem(snapshot: snapshot) {
-					newItems.append(icecreamItem)
-				}
-			}
-
-			self.items = newItems
-		})
+		self.presenter?.reloadData()
+//		ref = Database.database().reference(withPath: IceCreamDatabasePath)
+//		ref.queryOrdered(byChild: "name").observe(.value, with: { snapshot in
+//			var newItems: [IceCreamItem] = []
+//			for child in snapshot.children {
+//				if let snapshot = child as? DataSnapshot,
+//					let icecreamItem = IceCreamItem(snapshot: snapshot) {
+//					newItems.append(icecreamItem)
+//				}
+//			}
+//
+//			self.items = newItems
+//		})
 	}
 }
 
@@ -108,5 +111,18 @@ extension IceCreamListTableViewController {
 				formViewcontroller.iceCreamItem = iceCreamItem
 			}
 		}
+	}
+}
+
+// MARK: Presenter to view protocol
+extension IceCreamListTableViewController: PresenterToViewProtocol {
+	func showIceCreamList(iceCreamItems: [IceCreamItem]) {
+		self.items = iceCreamItems
+	}
+
+	func showError() {
+		let alert = UIAlertController(title: "Alert", message: "Problem Fetching Ice Creams", preferredStyle: UIAlertControllerStyle.alert)
+		alert.addAction(UIAlertAction(title: "Okay", style: UIAlertActionStyle.default, handler: nil))
+		self.present(alert, animated: true, completion: nil)
 	}
 }
