@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		1F807A4620F04E500050B8DE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F807A4520F04E500050B8DE /* AppDelegate.swift */; };
-		1F807A4820F04E500050B8DE /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F807A4720F04E500050B8DE /* ViewController.swift */; };
 		1F807A4B20F04E500050B8DE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1F807A4920F04E500050B8DE /* Main.storyboard */; };
 		1F807A4D20F04E520050B8DE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1F807A4C20F04E520050B8DE /* Assets.xcassets */; };
 		1F807A5020F04E520050B8DE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1F807A4E20F04E520050B8DE /* LaunchScreen.storyboard */; };
@@ -51,7 +50,6 @@
 		14BE8F85836D02E664FE90D1 /* Pods-IceCreamFactory.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IceCreamFactory.release.xcconfig"; path = "Pods/Target Support Files/Pods-IceCreamFactory/Pods-IceCreamFactory.release.xcconfig"; sourceTree = "<group>"; };
 		1F807A4220F04E500050B8DE /* IceCreamFactory.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = IceCreamFactory.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1F807A4520F04E500050B8DE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		1F807A4720F04E500050B8DE /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		1F807A4A20F04E500050B8DE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		1F807A4C20F04E520050B8DE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1F807A4F20F04E520050B8DE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -132,21 +130,18 @@
 		1F807A4420F04E500050B8DE /* IceCreamFactory */ = {
 			isa = PBXGroup;
 			children = (
+				1F807A4520F04E500050B8DE /* AppDelegate.swift */,
+				1FB0EF2A20F7AA8000377C68 /* Viewcontrollers */,
+				1FB0EF2920F7AA5D00377C68 /* Cell */,
+				1FB0EF2820F7AA4500377C68 /* Model */,
+				1FB0EF2720F7AA2B00377C68 /* Storyboard */,
 				1F81233F20F5B22B009883E0 /* Interector */,
 				1F81233C20F5AF7A009883E0 /* Presenter */,
 				1F81233920F45425009883E0 /* Router */,
 				1F81233620F45225009883E0 /* Protocols */,
-				1F807A4520F04E500050B8DE /* AppDelegate.swift */,
-				1F807A4720F04E500050B8DE /* ViewController.swift */,
-				1F807A4920F04E500050B8DE /* Main.storyboard */,
-				1F807A4C20F04E520050B8DE /* Assets.xcassets */,
-				1F807A4E20F04E520050B8DE /* LaunchScreen.storyboard */,
-				1F807A7320F04FC10050B8DE /* GoogleService-Info.plist */,
+				1FB0EF2B20F7AAB000377C68 /* Assets */,
 				1F807A5120F04E520050B8DE /* Info.plist */,
-				1F807A7520F0FB490050B8DE /* IceCreamListTableViewController.swift */,
-				1F807A7720F0FB790050B8DE /* IceCreamItem.swift */,
-				1F807A7920F102730050B8DE /* IceCreamFormViewController.swift */,
-				1F807A7B20F162DF0050B8DE /* IceCreamTableViewCell.swift */,
+				1F807A7320F04FC10050B8DE /* GoogleService-Info.plist */,
 			);
 			path = IceCreamFactory;
 			sourceTree = "<group>";
@@ -199,6 +194,48 @@
 				1F81234020F5B240009883E0 /* IceCreamListInterector.swift */,
 			);
 			path = Interector;
+			sourceTree = "<group>";
+		};
+		1FB0EF2720F7AA2B00377C68 /* Storyboard */ = {
+			isa = PBXGroup;
+			children = (
+				1F807A4E20F04E520050B8DE /* LaunchScreen.storyboard */,
+				1F807A4920F04E500050B8DE /* Main.storyboard */,
+			);
+			path = Storyboard;
+			sourceTree = "<group>";
+		};
+		1FB0EF2820F7AA4500377C68 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				1F807A7720F0FB790050B8DE /* IceCreamItem.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		1FB0EF2920F7AA5D00377C68 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				1F807A7B20F162DF0050B8DE /* IceCreamTableViewCell.swift */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		1FB0EF2A20F7AA8000377C68 /* Viewcontrollers */ = {
+			isa = PBXGroup;
+			children = (
+				1F807A7520F0FB490050B8DE /* IceCreamListTableViewController.swift */,
+				1F807A7920F102730050B8DE /* IceCreamFormViewController.swift */,
+			);
+			path = Viewcontrollers;
+			sourceTree = "<group>";
+		};
+		1FB0EF2B20F7AAB000377C68 /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				1F807A4C20F04E520050B8DE /* Assets.xcassets */,
+			);
+			path = Assets;
 			sourceTree = "<group>";
 		};
 		6D90E0B26DAD2D87E3E5FE0D /* Pods */ = {
@@ -442,7 +479,6 @@
 				1F81233B20F4547F009883E0 /* IceCreamFactoryRouter.swift in Sources */,
 				1F81234120F5B240009883E0 /* IceCreamListInterector.swift in Sources */,
 				1F807A7C20F162DF0050B8DE /* IceCreamTableViewCell.swift in Sources */,
-				1F807A4820F04E500050B8DE /* ViewController.swift in Sources */,
 				1F807A7820F0FB790050B8DE /* IceCreamItem.swift in Sources */,
 				1F807A7620F0FB490050B8DE /* IceCreamListTableViewController.swift in Sources */,
 				1F81233820F45289009883E0 /* IceCreamFactoryProtocols.swift in Sources */,

@@ -17,46 +17,22 @@ class IceCreamListTableViewController: UIViewController {
 
 	var presenter: ViewToPresenterProtocol?
 
-	var items: [IceCreamItem] = []
-	var ref: DatabaseReference!
-
-	@IBOutlet weak var tableView: UITableView! {
+	var items: [IceCreamItem] = [] {
 		didSet {
 			self.tableView.reloadData()
 		}
 	}
+	var ref: DatabaseReference!
 
+	@IBOutlet weak var tableView: UITableView!
+}
 
-//	override func viewWillAppear(_ animated: Bool) {
-//		super.viewWillAppear(animated)
-//		ref.observe(.value, with: { snapshot in
-//			var newItems: [IceCreamItem] = []
-//			for child in snapshot.children {
-//				if let snapshot = child as? DataSnapshot,
-//					let groceryItem = IceCreamItem(snapshot: snapshot) {
-//					newItems.append(groceryItem)
-//				}
-//			}
-//			self.items = newItems
-//			self.tableView.reloadData()
-//		})
-//	}
+// MARK: View controller life cycle 
 
+extension IceCreamListTableViewController {
 	override func viewDidLoad() {
 		super.viewDidLoad()
 		self.presenter?.reloadData()
-//		ref = Database.database().reference(withPath: IceCreamDatabasePath)
-//		ref.queryOrdered(byChild: "name").observe(.value, with: { snapshot in
-//			var newItems: [IceCreamItem] = []
-//			for child in snapshot.children {
-//				if let snapshot = child as? DataSnapshot,
-//					let icecreamItem = IceCreamItem(snapshot: snapshot) {
-//					newItems.append(icecreamItem)
-//				}
-//			}
-//
-//			self.items = newItems
-//		})
 	}
 }
 

@@ -19,10 +19,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 		FirebaseApp.configure()
 		Database.database().isPersistenceEnabled = true
 
-		let liveNews = IceCreamFactoryRouter.createModule();
+		let iceCreamList = IceCreamFactoryRouter.createModule();
 
 		window = UIWindow(frame: UIScreen.main.bounds);
-		window?.rootViewController = liveNews
+		window?.rootViewController = iceCreamList
 		window?.makeKeyAndVisible();
 		
 		return true
