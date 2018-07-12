@@ -11,10 +11,6 @@ import Firebase
 
 class IceCreamListTableViewController: UIViewController {
 
-	// MARK: Constants
-	let IceCreamSegue = "IceCreamSegue"
-	let IceCreamDatabasePath = "icecream-items"
-
 	var presenter: ViewToPresenterProtocol?
 
 	var items: [IceCreamItem] = [] {
@@ -22,12 +18,11 @@ class IceCreamListTableViewController: UIViewController {
 			self.tableView.reloadData()
 		}
 	}
-	var ref: DatabaseReference!
 
 	@IBOutlet weak var tableView: UITableView!
 }
 
-// MARK: View controller life cycle 
+// MARK: View controller life cycle
 
 extension IceCreamListTableViewController {
 	override func viewDidLoad() {
@@ -44,7 +39,7 @@ extension IceCreamListTableViewController: UITableViewDataSource, UITableViewDel
 	}
 
 	func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-		let cell = tableView.dequeueReusableCell(withIdentifier: "IceCreamCell", for: indexPath) as! IceCreamTableViewCell
+		let cell = tableView.dequeueReusableCell(withIdentifier: Constants.CELL_ID, for: indexPath) as! IceCreamTableViewCell
 		let icecreamItem = items[indexPath.row]
 		cell.setupCell(icecreamItem)
 		return cell
@@ -53,7 +48,7 @@ extension IceCreamListTableViewController: UITableViewDataSource, UITableViewDel
 	func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
 		tableView.deselectRow(at: indexPath, animated: true)
 		let iceCreamItem = items[indexPath.row]
-		self.performSegue(withIdentifier: IceCreamSegue, sender: iceCreamItem)
+		self.performSegue(withIdentifier: Constants.ICECREAM_SEGUE, sender: iceCreamItem)
 	}
 
 	func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
@@ -71,7 +66,7 @@ extension IceCreamListTableViewController: UITableViewDataSource, UITableViewDel
 // MARK: Actions
 extension IceCreamListTableViewController {
 	@IBAction func addButtonDidTouch(_ sender: AnyObject) {
-		self.performSegue(withIdentifier: IceCreamSegue, sender: -1)
+		self.performSegue(withIdentifier: Constants.ICECREAM_SEGUE, sender: -1)
 	}
 }
 
@@ -79,7 +74,7 @@ extension IceCreamListTableViewController {
 // MARK: Perform
 extension IceCreamListTableViewController {
 	override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-		if segue.identifier == IceCreamSegue {
+		if segue.identifier == Constants.ICECREAM_SEGUE {
 			let navigationVC = segue.destination as! UINavigationController
 			let formViewcontroller = navigationVC.viewControllers.first as! IceCreamFormViewController
 

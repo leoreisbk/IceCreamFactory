@@ -18,6 +18,10 @@ class IceCreamListPresenter: ViewToPresenterProtocol {
 	func reloadData() {
 		interector?.fetchIceCreamItems()
 	}
+	
+	func addItem(item: IceCreamItem) {
+		interector?.addIceCream(item: item)
+	}
 }
 
 extension IceCreamListPresenter: InterectorToPresenterProtocol {
@@ -27,7 +31,6 @@ extension IceCreamListPresenter: InterectorToPresenterProtocol {
 
 	func iceCreamItemsFetchedFailed() {
 		view?.showError()
-	}
-
+	} 
 	
 }

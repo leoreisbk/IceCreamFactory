@@ -17,12 +17,12 @@ class IceCreamFormViewController: UIViewController {
 	@IBOutlet weak var flavorTextField: UITextField!
 	@IBOutlet weak var tempTextField: UITextField!
 
-	var ref: DatabaseReference!
 	var iceCreamItem: IceCreamItem?
+	
+	var presenter: PresentorToInterectorProtocol?
 
 	override func viewDidLoad() {
         super.viewDidLoad()
-		ref = Database.database().reference(withPath: "icecream-items")
     }
 
 	override func viewWillAppear(_ animated: Bool) {
@@ -56,9 +56,19 @@ extension IceCreamFormViewController {
 		let tempField = tempTextField.text else { return }
 
 		let icecreamItem = IceCreamItem(name: nameField, flavor: flavorField, color: colorField, temp: tempField, weight: weightField)
-
-		let icecreamItemRef = self.ref.child((nameField.lowercased()))
-		icecreamItemRef.setValue(icecreamItem.toAnyObject())
+		presenter?.addIceCream(item: icecreamItem)
 		dismissForm()
 	}
 }
+
+// MARK: Presenter to View Protocol
+
+//extension IceCreamFormViewController: PresenterToViewProtocol {
+//	func showIceCreamList(iceCreamItems: [IceCreamItem]) {
+//		<#code#>
+//	}
+//
+//	func showError() {
+//		<#code#>
+//	}
+//}

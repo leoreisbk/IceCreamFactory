@@ -11,14 +11,11 @@ import Firebase
 
 class IceCreamListInterector: PresentorToInterectorProtocol {
 
-	let IceCreamDatabasePath = "icecream-items"
-
-	var reference: DatabaseReference?
+	var reference: DatabaseReference = Database.database().reference(withPath: Constants.PATH)
 	var presenter: InterectorToPresenterProtocol?
 
 	func fetchIceCreamItems() {
-		reference = Database.database().reference(withPath: IceCreamDatabasePath)
-		reference?.queryOrdered(byChild: "name").observe(.value, with: { snapshot in
+		reference.queryOrdered(byChild: Constants.QUERY_CHILD).observe(.value, with: { snapshot in
 			var newItems: [IceCreamItem] = []
 			for child in snapshot.children {
 				if let snapshot = child as? DataSnapshot,
@@ -29,5 +26,11 @@ class IceCreamListInterector: PresentorToInterectorProtocol {
 
 			self.presenter?.iceCreamItemsFetched(iceCreamItems: newItems)
 		})
+	}
+	
+	func addIceCream(item: IceCreamItem) {
+		let itemReference = reference.child(Constants.QUERY_CHILD)
+		itemReference.setValue(item.toAnyObject())
+		presenter?.addItem(item: item)
 	}
 }
