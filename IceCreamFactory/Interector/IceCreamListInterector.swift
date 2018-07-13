@@ -10,27 +10,31 @@ import UIKit
 import Firebase
 
 class IceCreamListInterector: PresentorToInterectorProtocol {
-
-	var reference: DatabaseReference = Database.database().reference(withPath: Constants.PATH)
+	var reference: DatabaseReference?
 	var presenter: InterectorToPresenterProtocol?
 
 	func fetchIceCreamItems() {
-		reference.queryOrdered(byChild: Constants.QUERY_CHILD).observe(.value, with: { snapshot in
+		reference = Database.database().reference(withPath: Constants.PATH)
+		reference?.queryOrdered(byChild: Constants.QUERY_CHILD).observe(.value, with: { snapshot in
 			var newItems: [IceCreamItem] = []
-			for child in snapshot.children {
-				if let snapshot = child as? DataSnapshot,
-					let icecreamItem = IceCreamItem(snapshot: snapshot) {
-					newItems.append(icecreamItem)
+			if snapshot.exists() {
+				for child in snapshot.children {
+					if let snapshot = child as? DataSnapshot,
+						let icecreamItem = IceCreamItem(snapshot: snapshot) {
+						newItems.append(icecreamItem)
+					}
 				}
+				self.presenter?.iceCreamItemsFetched(iceCreamItems: newItems)
+			} else {
+				self.presenter?.iceCreamItemsFetchedFailed()
 			}
-
-			self.presenter?.iceCreamItemsFetched(iceCreamItems: newItems)
 		})
 	}
 	
 	func addIceCream(item: IceCreamItem) {
-		let itemReference = reference.child(Constants.QUERY_CHILD)
-		itemReference.setValue(item.toAnyObject())
+		reference = Database.database().reference(withPath: Constants.PATH)
+		let itemReference = reference?.child(Constants.QUERY_CHILD)
+		itemReference?.setValue(item.toAnyObject())
 		presenter?.addItem(item: item)
 	}
 }

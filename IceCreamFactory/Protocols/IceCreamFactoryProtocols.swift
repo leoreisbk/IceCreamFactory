@@ -23,7 +23,7 @@ protocol InterectorToPresenterProtocol: class {
 
 protocol PresentorToInterectorProtocol: class {
 	var presenter: InterectorToPresenterProtocol? {get set}
-	var reference: DatabaseReference {get set}
+	var reference: DatabaseReference? {get set}
 	func fetchIceCreamItems()
 	func addIceCream(item: IceCreamItem)
 }

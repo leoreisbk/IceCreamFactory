@@ -33,6 +33,8 @@ class IceCreamFormViewController: UIViewController {
 			colorTextField.text = icecreamItem.color
 			flavorTextField.text = icecreamItem.flavor
 			tempTextField.text = icecreamItem.temp
+			
+			presenter?.addIceCream(item: icecreamItem)
 		}
 	}
 }
@@ -55,8 +57,8 @@ extension IceCreamFormViewController {
 		let flavorField = flavorTextField.text,
 		let tempField = tempTextField.text else { return }
 
-		let icecreamItem = IceCreamItem(name: nameField, flavor: flavorField, color: colorField, temp: tempField, weight: weightField)
-		presenter?.addIceCream(item: icecreamItem)
+		let item = IceCreamItem(name: nameField, flavor: flavorField, color: colorField, temp: tempField, weight: weightField)
+		presenter?.addIceCream(item: item)
 		dismissForm()
 	}
 }

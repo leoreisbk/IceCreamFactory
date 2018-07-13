@@ -27,7 +27,7 @@ class IceCreamFactoryRouter: PresenterToRouterProtocol {
 }
 
 extension IceCreamFactoryRouter {
-	static var mainstoryboard: UIStoryboard{
-		return UIStoryboard(name:"Main",bundle: Bundle.main)
+	static var mainstoryboard: UIStoryboard {
+		return UIStoryboard(name:"Main",bundle: nil)
 	}
 }
