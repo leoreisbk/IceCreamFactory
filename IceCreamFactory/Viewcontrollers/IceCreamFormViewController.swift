@@ -18,8 +18,8 @@ class IceCreamFormViewController: UIViewController {
 	@IBOutlet weak var tempTextField: UITextField!
 
 	var iceCreamItem: IceCreamItem?
-	
-	var presenter: PresentorToInterectorProtocol?
+
+	var eventHandler : AddItemModuleInterface?
 
 	override func viewDidLoad() {
         super.viewDidLoad()
@@ -33,8 +33,6 @@ class IceCreamFormViewController: UIViewController {
 			colorTextField.text = icecreamItem.color
 			flavorTextField.text = icecreamItem.flavor
 			tempTextField.text = icecreamItem.temp
-			
-			presenter?.addIceCream(item: icecreamItem)
 		}
 	}
 }
@@ -42,12 +40,8 @@ class IceCreamFormViewController: UIViewController {
 // MARK: Actions
 
 extension IceCreamFormViewController {
-	fileprivate func dismissForm() {
-		self.dismiss(animated: true, completion: nil)
-	}
-
 	@IBAction func cancelButton(_ sender: Any) {
-		dismissForm()
+		eventHandler?.cancelAddAction()
 	}
 
 	@IBAction func saveButtonDidTouch(_ sender: Any) {
@@ -58,19 +52,6 @@ extension IceCreamFormViewController {
 		let tempField = tempTextField.text else { return }
 
 		let item = IceCreamItem(name: nameField, flavor: flavorField, color: colorField, temp: tempField, weight: weightField)
-		presenter?.addIceCream(item: item)
-		dismissForm()
+		eventHandler?.saveAddAction(item)
 	}
 }
-
-// MARK: Presenter to View Protocol
-
-//extension IceCreamFormViewController: PresenterToViewProtocol {
-//	func showIceCreamList(iceCreamItems: [IceCreamItem]) {
-//		<#code#>
-//	}
-//
-//	func showError() {
-//		<#code#>
-//	}
-//}

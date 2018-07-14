@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1F55369420FA80A200B13462 /* AppDependencies.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F55369320FA80A200B13462 /* AppDependencies.swift */; };
+		1F55369620FA85FB00B13462 /* AddItemPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F55369520FA85FB00B13462 /* AddItemPresenter.swift */; };
+		1F55369820FA866600B13462 /* AddItemModuleInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F55369720FA866600B13462 /* AddItemModuleInterface.swift */; };
+		1F55369A20FA86CD00B13462 /* AddItemInterector.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F55369920FA86CD00B13462 /* AddItemInterector.swift */; };
+		1F55369C20FA890D00B13462 /* AddItemWireframe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F55369B20FA890D00B13462 /* AddItemWireframe.swift */; };
+		1F55369E20FA8C4500B13462 /* AddItemModuleDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F55369D20FA8C4500B13462 /* AddItemModuleDelegate.swift */; };
 		1F807A4620F04E500050B8DE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F807A4520F04E500050B8DE /* AppDelegate.swift */; };
 		1F807A4B20F04E500050B8DE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1F807A4920F04E500050B8DE /* Main.storyboard */; };
 		1F807A4D20F04E520050B8DE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1F807A4C20F04E520050B8DE /* Assets.xcassets */; };
@@ -49,6 +55,12 @@
 		02A72CEA1A88A02F0E4BAB26 /* Pods_IceCreamFactory.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_IceCreamFactory.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		10B7971750BAECE5B3020FC0 /* Pods-IceCreamFactoryUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IceCreamFactoryUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-IceCreamFactoryUITests/Pods-IceCreamFactoryUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		14BE8F85836D02E664FE90D1 /* Pods-IceCreamFactory.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IceCreamFactory.release.xcconfig"; path = "Pods/Target Support Files/Pods-IceCreamFactory/Pods-IceCreamFactory.release.xcconfig"; sourceTree = "<group>"; };
+		1F55369320FA80A200B13462 /* AppDependencies.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDependencies.swift; sourceTree = "<group>"; };
+		1F55369520FA85FB00B13462 /* AddItemPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddItemPresenter.swift; sourceTree = "<group>"; };
+		1F55369720FA866600B13462 /* AddItemModuleInterface.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddItemModuleInterface.swift; sourceTree = "<group>"; };
+		1F55369920FA86CD00B13462 /* AddItemInterector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddItemInterector.swift; sourceTree = "<group>"; };
+		1F55369B20FA890D00B13462 /* AddItemWireframe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddItemWireframe.swift; sourceTree = "<group>"; };
+		1F55369D20FA8C4500B13462 /* AddItemModuleDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddItemModuleDelegate.swift; sourceTree = "<group>"; };
 		1F807A4220F04E500050B8DE /* IceCreamFactory.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = IceCreamFactory.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1F807A4520F04E500050B8DE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1F807A4A20F04E500050B8DE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -107,6 +119,37 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1F55369020FA79BC00B13462 /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				1F55369220FA79E500B13462 /* AddModule */,
+				1F55369120FA79D600B13462 /* ListModule */,
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
+		1F55369120FA79D600B13462 /* ListModule */ = {
+			isa = PBXGroup;
+			children = (
+				1F81233C20F5AF7A009883E0 /* Presenter */,
+				1F81233F20F5B22B009883E0 /* Interector */,
+				1F81233920F45425009883E0 /* Router */,
+			);
+			path = ListModule;
+			sourceTree = "<group>";
+		};
+		1F55369220FA79E500B13462 /* AddModule */ = {
+			isa = PBXGroup;
+			children = (
+				1F55369520FA85FB00B13462 /* AddItemPresenter.swift */,
+				1F55369720FA866600B13462 /* AddItemModuleInterface.swift */,
+				1F55369920FA86CD00B13462 /* AddItemInterector.swift */,
+				1F55369B20FA890D00B13462 /* AddItemWireframe.swift */,
+				1F55369D20FA8C4500B13462 /* AddItemModuleDelegate.swift */,
+			);
+			path = AddModule;
+			sourceTree = "<group>";
+		};
 		1F807A3920F04E500050B8DE = {
 			isa = PBXGroup;
 			children = (
@@ -133,18 +176,17 @@
 			isa = PBXGroup;
 			children = (
 				1F807A4520F04E500050B8DE /* AppDelegate.swift */,
+				1F55369020FA79BC00B13462 /* Modules */,
 				1FB0EF2A20F7AA8000377C68 /* Viewcontrollers */,
 				1FB0EF2920F7AA5D00377C68 /* Cell */,
 				1FB0EF2820F7AA4500377C68 /* Entity */,
 				1FB0EF2720F7AA2B00377C68 /* Storyboard */,
-				1F81233F20F5B22B009883E0 /* Interector */,
-				1F81233C20F5AF7A009883E0 /* Presenter */,
-				1F81233920F45425009883E0 /* Router */,
 				1F81233620F45225009883E0 /* Protocols */,
 				1FB0EF2B20F7AAB000377C68 /* Assets */,
 				1F807A5120F04E520050B8DE /* Info.plist */,
 				1F807A7320F04FC10050B8DE /* GoogleService-Info.plist */,
 				1FB0EF2C20F7AC7300377C68 /* Constants.swift */,
+				1F55369320FA80A200B13462 /* AppDependencies.swift */,
 			);
 			path = IceCreamFactory;
 			sourceTree = "<group>";
@@ -480,8 +522,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				1F81233B20F4547F009883E0 /* IceCreamFactoryRouter.swift in Sources */,
+				1F55369620FA85FB00B13462 /* AddItemPresenter.swift in Sources */,
+				1F55369420FA80A200B13462 /* AppDependencies.swift in Sources */,
 				1F81234120F5B240009883E0 /* IceCreamListInterector.swift in Sources */,
 				1F807A7C20F162DF0050B8DE /* IceCreamTableViewCell.swift in Sources */,
+				1F55369C20FA890D00B13462 /* AddItemWireframe.swift in Sources */,
+				1F55369820FA866600B13462 /* AddItemModuleInterface.swift in Sources */,
 				1F807A7820F0FB790050B8DE /* IceCreamItem.swift in Sources */,
 				1F807A7620F0FB490050B8DE /* IceCreamListTableViewController.swift in Sources */,
 				1FB0EF2D20F7AC7300377C68 /* Constants.swift in Sources */,
@@ -489,6 +535,8 @@
 				1F807A7A20F102730050B8DE /* IceCreamFormViewController.swift in Sources */,
 				1F807A4620F04E500050B8DE /* AppDelegate.swift in Sources */,
 				1F81233E20F5AFAE009883E0 /* IceCreamListPresenter.swift in Sources */,
+				1F55369A20FA86CD00B13462 /* AddItemInterector.swift in Sources */,
+				1F55369E20FA8C4500B13462 /* AddItemModuleDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

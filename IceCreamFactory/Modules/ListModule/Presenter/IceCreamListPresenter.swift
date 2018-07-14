@@ -10,17 +10,11 @@ import UIKit
 
 class IceCreamListPresenter: ViewToPresenterProtocol {
 	var view: PresenterToViewProtocol?
-
 	var interector: PresentorToInterectorProtocol?
-
 	var router: PresenterToRouterProtocol?
 
 	func reloadData() {
 		interector?.fetchIceCreamItems()
-	}
-	
-	func addItem(item: IceCreamItem) {
-		interector?.addIceCream(item: item)
 	}
 }
 
