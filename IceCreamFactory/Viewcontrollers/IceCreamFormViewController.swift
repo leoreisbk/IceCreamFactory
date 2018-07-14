@@ -55,3 +55,9 @@ extension IceCreamFormViewController {
 		eventHandler?.saveAddAction(item)
 	}
 }
+
+extension IceCreamFormViewController: AddItemViewInterface {
+	func setIceCreamItem(_ item: IceCreamItem?) {
+		iceCreamItem = item
+	}
+}

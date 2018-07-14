@@ -9,6 +9,8 @@
 import UIKit
 
 class IceCreamListPresenter: ViewToPresenterProtocol {
+
+	
 	var view: PresenterToViewProtocol?
 	var interector: PresentorToInterectorProtocol?
 	var router: PresenterToRouterProtocol?
@@ -27,4 +29,14 @@ extension IceCreamListPresenter: InterectorToPresenterProtocol {
 		view?.showError()
 	} 
 	
+}
+
+extension IceCreamListPresenter: AddItemModuleDelegate {
+	func addModuleDidCancelAddAction() {
+
+	}
+
+	func addModuleDidSaveAddAction() {
+		reloadData()
+	}
 }

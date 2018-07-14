@@ -17,6 +17,7 @@ class AddItemWireframe: NSObject {
 	func presentAddInterfaceFromViewController(_ viewController: UIViewController) {
 		let newViewController = addViewController()
 		newViewController.eventHandler = addPresenter
+		addPresenter?.configureUserInterfaceForPresentation(newViewController)
 
 		viewController.present(newViewController, animated: true, completion: nil)
 

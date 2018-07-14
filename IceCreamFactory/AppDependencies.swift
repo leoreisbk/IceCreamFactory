@@ -25,6 +25,8 @@ class AppDependencies {
 
 		let rootWireframe = RootWireFrame()
 
+		let listPresenter = IceCreamListPresenter()
+
 		let addWireframe = AddItemWireframe()
 		let addInteractor = AddItemInteractor()
 		let addPresenter = AddItemPresenter()
@@ -32,11 +34,11 @@ class AppDependencies {
 		addWireframe.addPresenter = addPresenter
 
 		addPresenter.addWireframe = addWireframe
-//		addPresenter.addItemModuleDelegate = listPresenter
+		addPresenter.addModuleDelegate = listPresenter
 		addPresenter.addInteractor = addInteractor
 
 		listWireframe.addWireframe = addWireframe
-//		listWireframe.listPresenter = listPresenter
+		listWireframe.listPresenter = listPresenter
 		listWireframe.rootWireframe = rootWireframe
 		
 	}

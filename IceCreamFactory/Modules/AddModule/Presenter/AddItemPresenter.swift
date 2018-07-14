@@ -12,6 +12,10 @@ class AddItemPresenter : NSObject {
 	var addInteractor : AddItemInteractor?
 	var addWireframe : AddItemWireframe?
 	var addModuleDelegate : AddItemModuleDelegate?
+
+	func configureUserInterfaceForPresentation(_ addViewUserInterface: AddItemViewInterface) {
+		addViewUserInterface.setIceCreamItem(nil)
+	}
 }
 
 // MARK: AddItemModuleInterface 

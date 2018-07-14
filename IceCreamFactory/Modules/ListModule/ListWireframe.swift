@@ -18,9 +18,9 @@ class ListWireframe: NSObject {
 
 	func presentListInterfaceFromWindow(_ window: UIWindow) {
 		let viewController = listViewControllerFromStoryboard()
-//		viewController.eventHandler = listPresenter
+		viewController.presenter = listPresenter
 		listViewController = viewController
-//		listPresenter?.userInterface = viewController
+		listPresenter?.view = viewController
 		rootWireframe?.showRootViewController(viewController, inWindow: window)
 	}
 
