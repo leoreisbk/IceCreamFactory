@@ -9,7 +9,7 @@
 import UIKit
 
 class AddItemPresenter : NSObject {
-	var addInteractor : AddItemInterector?
+	var addInteractor : AddItemInteractor?
 	var addWireframe : AddItemWireframe?
 	var addModuleDelegate : AddItemModuleDelegate?
 }

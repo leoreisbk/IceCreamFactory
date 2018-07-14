@@ -9,7 +9,7 @@
 import UIKit
 import Firebase
 
-class AddItemInterector {
+class AddItemInteractor {
 	var reference: DatabaseReference?
 
 	func saveNewEntry(_ item: IceCreamItem) {
