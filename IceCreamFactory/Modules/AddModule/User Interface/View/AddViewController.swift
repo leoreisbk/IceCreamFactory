@@ -9,7 +9,7 @@
 import UIKit
 import Firebase
 
-class IceCreamFormViewController: UIViewController {
+class AddViewController: UIViewController {
 
 	@IBOutlet weak var nameTextField: UITextField!
 	@IBOutlet weak var weightTextField: UITextField!
@@ -39,7 +39,7 @@ class IceCreamFormViewController: UIViewController {
 
 // MARK: Actions
 
-extension IceCreamFormViewController {
+extension AddViewController {
 	@IBAction func cancelButton(_ sender: Any) {
 		eventHandler?.cancelAddAction()
 	}
@@ -56,7 +56,7 @@ extension IceCreamFormViewController {
 	}
 }
 
-extension IceCreamFormViewController: AddItemViewInterface {
+extension AddViewController: AddItemViewInterface {
 	func setIceCreamItem(_ item: IceCreamItem?) {
 		iceCreamItem = item
 	}

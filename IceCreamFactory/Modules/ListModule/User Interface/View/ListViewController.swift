@@ -9,9 +9,8 @@
 import UIKit
 import Firebase
 
-class IceCreamListTableViewController: UIViewController {
-
-	var presenter: ViewToPresenterProtocol?
+class ListViewController: UIViewController, ListViewInterface {
+	var eventHandler : ListModuleInterface?
 
 	var items: [IceCreamItem] = [] {
 		didSet {
@@ -24,16 +23,20 @@ class IceCreamListTableViewController: UIViewController {
 
 // MARK: View controller life cycle
 
-extension IceCreamListTableViewController {
+extension ListViewController {
 	override func viewDidLoad() {
 		super.viewDidLoad()
-		self.presenter?.reloadData()
+	}
+
+	override func viewWillAppear(_ animated: Bool) {
+		super.viewWillAppear(animated)
+		eventHandler?.updateView()
 	}
 }
 
 // MARK: UITableView Delegate
 
-extension IceCreamListTableViewController: UITableViewDataSource, UITableViewDelegate {
+extension ListViewController: UITableViewDataSource, UITableViewDelegate {
 	func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
 		return items.count
 	}
@@ -64,19 +67,20 @@ extension IceCreamListTableViewController: UITableViewDataSource, UITableViewDel
 }
 
 // MARK: Actions
-extension IceCreamListTableViewController {
+extension ListViewController {
 	@IBAction func addButtonDidTouch(_ sender: AnyObject) {
-		self.performSegue(withIdentifier: Constants.ICECREAM_SEGUE, sender: -1)
+		eventHandler?.addNewEntry()
+//		self.performSegue(withIdentifier: Constants.ICECREAM_SEGUE, sender: -1)
 	}
 }
 
 
 // MARK: Perform
-extension IceCreamListTableViewController {
+extension ListViewController {
 	override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
 		if segue.identifier == Constants.ICECREAM_SEGUE {
 			let navigationVC = segue.destination as! UINavigationController
-			let formViewcontroller = navigationVC.viewControllers.first as! IceCreamFormViewController
+			let formViewcontroller = navigationVC.viewControllers.first as! AddViewController
 
 			if let iceCreamItem = sender as? IceCreamItem {
 				formViewcontroller.iceCreamItem = iceCreamItem
@@ -86,14 +90,19 @@ extension IceCreamListTableViewController {
 }
 
 // MARK: Presenter to view protocol
-extension IceCreamListTableViewController: PresenterToViewProtocol {
-	func showIceCreamList(iceCreamItems: [IceCreamItem]) {
-		self.items = iceCreamItems
-	}
-
-	func showError() {
+extension ListViewController {
+	func showNoContentMessage() {
 		let alert = UIAlertController(title: "Alert", message: "Problem Fetching Ice Creams", preferredStyle: UIAlertControllerStyle.alert)
 		alert.addAction(UIAlertAction(title: "Okay", style: UIAlertActionStyle.default, handler: nil))
 		self.present(alert, animated: true, completion: nil)
+	}
+
+	func reloadEntries() {
+		tableView.reloadData()
+	}
+
+	func showIceCreamList(iceCreamItems: [IceCreamItem]) {
+		self.items = iceCreamItems
+		reloadEntries()
 	}
 }

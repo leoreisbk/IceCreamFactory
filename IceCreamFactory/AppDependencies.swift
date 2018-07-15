@@ -18,18 +18,28 @@ class AppDependencies {
 
 	func installRootViewControllerIntoWindow(_ window: UIWindow) {
 		listWireframe.presentListInterfaceFromWindow(window)
-//		let iceCreamList = IceCreamFactoryRouter.createModule();
 	}
 
 	func configureDependencies() {
-
 		let rootWireframe = RootWireFrame()
 
-		let listPresenter = IceCreamListPresenter()
+		let listPresenter = ListPresenter()
+//		let listDataManager = ListDataManager()
+		let listInteractor = ListInteractor()
 
 		let addWireframe = AddItemWireframe()
 		let addInteractor = AddItemInteractor()
 		let addPresenter = AddItemPresenter()
+//		let addDataManager = AddDataManager()
+
+		listInteractor.output = listPresenter
+
+		listPresenter.listInteractor = listInteractor
+		listPresenter.listWireframe = listWireframe
+
+		listWireframe.addWireframe = addWireframe
+		listWireframe.listPresenter = listPresenter
+		listWireframe.rootWireframe = rootWireframe
 
 		addWireframe.addPresenter = addPresenter
 
@@ -37,9 +47,5 @@ class AppDependencies {
 		addPresenter.addModuleDelegate = listPresenter
 		addPresenter.addInteractor = addInteractor
 
-		listWireframe.addWireframe = addWireframe
-		listWireframe.listPresenter = listPresenter
-		listWireframe.rootWireframe = rootWireframe
-		
 	}
 }

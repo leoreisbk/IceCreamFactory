@@ -12,15 +12,15 @@ let IceCreamListTableViewControllerIdentifier = "IceCreamListTableViewController
 
 class ListWireframe: NSObject {
 	var addWireframe : AddItemWireframe?
-	var listPresenter : IceCreamListPresenter?
+	var listPresenter : ListPresenter?
 	var rootWireframe : RootWireFrame?
-	var listViewController : IceCreamListTableViewController?
+	var listViewController : ListViewController?
 
 	func presentListInterfaceFromWindow(_ window: UIWindow) {
 		let viewController = listViewControllerFromStoryboard()
-		viewController.presenter = listPresenter
+		viewController.eventHandler = listPresenter
 		listViewController = viewController
-		listPresenter?.view = viewController
+		listPresenter?.userInterface = viewController
 		rootWireframe?.showRootViewController(viewController, inWindow: window)
 	}
 
@@ -28,9 +28,9 @@ class ListWireframe: NSObject {
 		addWireframe?.presentAddInterfaceFromViewController(listViewController!)
 	}
 
-	func listViewControllerFromStoryboard() -> IceCreamListTableViewController {
+	func listViewControllerFromStoryboard() -> ListViewController {
 		let storyboard = mainStoryboard()
-		let viewController = storyboard.instantiateViewController(withIdentifier: IceCreamListTableViewControllerIdentifier) as! IceCreamListTableViewController
+		let viewController = storyboard.instantiateViewController(withIdentifier: IceCreamListTableViewControllerIdentifier) as! ListViewController
 		return viewController
 	}
 

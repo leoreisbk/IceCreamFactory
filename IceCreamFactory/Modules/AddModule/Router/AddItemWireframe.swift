@@ -17,8 +17,6 @@ class AddItemWireframe: NSObject {
 	func presentAddInterfaceFromViewController(_ viewController: UIViewController) {
 		let newViewController = addViewController()
 		newViewController.eventHandler = addPresenter
-		addPresenter?.configureUserInterfaceForPresentation(newViewController)
-
 		viewController.present(newViewController, animated: true, completion: nil)
 
 		presentedViewController = newViewController
@@ -28,9 +26,9 @@ class AddItemWireframe: NSObject {
 		presentedViewController?.dismiss(animated: true, completion: nil)
 	}
 
-	func addViewController() -> IceCreamFormViewController {
+	func addViewController() -> AddViewController {
 		let storyboard = mainStoryboard()
-		let addViewController: IceCreamFormViewController = storyboard.instantiateViewController(withIdentifier: IceCreamFormViewControllerIdentifier) as! IceCreamFormViewController
+		let addViewController: AddViewController = storyboard.instantiateViewController(withIdentifier: IceCreamFormViewControllerIdentifier) as! AddViewController
 		return addViewController
 	}
 
