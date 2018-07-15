@@ -52,8 +52,6 @@ extension ListViewController: UITableViewDataSource, UITableViewDelegate {
 		tableView.deselectRow(at: indexPath, animated: true)
 		let iceCreamItem = items[indexPath.row]
 		eventHandler?.editItem(iceCreamItem)
-
-//		self.performSegue(withIdentifier: Constants.ICECREAM_SEGUE, sender: iceCreamItem)
 	}
 
 	func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
@@ -72,7 +70,6 @@ extension ListViewController: UITableViewDataSource, UITableViewDelegate {
 extension ListViewController {
 	@IBAction func addButtonDidTouch(_ sender: AnyObject) {
 		eventHandler?.addNewItem()
-//		self.performSegue(withIdentifier: Constants.ICECREAM_SEGUE, sender: -1)
 	}
 }
 
@@ -95,7 +92,10 @@ extension ListViewController {
 extension ListViewController {
 	func showNoContentMessage() {
 		let alert = UIAlertController(title: "Alert", message: "Problem Fetching Ice Creams", preferredStyle: UIAlertControllerStyle.alert)
-		alert.addAction(UIAlertAction(title: "Okay", style: UIAlertActionStyle.default, handler: nil))
+		alert.addAction(UIAlertAction(title: "Okay", style: UIAlertActionStyle.default, handler: { (action) in
+			print(action)
+			self.reloadEntries()
+		}))
 		self.present(alert, animated: true, completion: nil)
 	}
 

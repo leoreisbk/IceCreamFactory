@@ -13,8 +13,8 @@ class AddItemInteractor {
 	var reference: DatabaseReference?
 
 	func saveNewEntry(_ item: IceCreamItem) {
-		reference = Database.database().reference(withPath: Constants.PATH)
-		let itemReference = reference?.child(item.name)
+		reference = Database.database().reference(withPath: Constants.PATH_CHILD)
+		let itemReference = reference?.child("icecreams/\(item.name)")
 		itemReference?.setValue(item.toAnyObject())
 	}
 }
