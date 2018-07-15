@@ -14,7 +14,7 @@ class AddItemInteractor {
 
 	func saveNewEntry(_ item: IceCreamItem) {
 		reference = Database.database().reference(withPath: Constants.PATH)
-		let itemReference = reference?.child(Constants.QUERY_CHILD)
+		let itemReference = reference?.child(item.name)
 		itemReference?.setValue(item.toAnyObject())
 	}
 }

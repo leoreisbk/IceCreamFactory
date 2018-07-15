@@ -10,22 +10,6 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Navigation Controller-->
-        <scene sceneID="v9k-8V-qGm">
-            <objects>
-                <navigationController storyboardIdentifier="NavigationController" id="S4H-5o-uJN" sceneMemberID="viewController">
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="cq6-8U-4Co">
-                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <connections>
-                        <segue destination="cXO-dE-SHN" kind="relationship" relationship="rootViewController" id="Grr-eS-YFD"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="KNE-nA-oeI" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="2553" y="135"/>
-        </scene>
         <!--Add View Controller-->
         <scene sceneID="cKc-nw-MeA">
             <objects>
@@ -35,7 +19,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" placeholder="name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="xKe-cQ-duy">
-                                <rect key="frame" x="18" y="129" width="340" height="30"/>
+                                <rect key="frame" x="18" y="85" width="340" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="y2E-fi-vcE"/>
                                 </constraints>
@@ -44,7 +28,7 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" placeholder="weight" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="kt4-QL-ieY">
-                                <rect key="frame" x="18" y="182" width="340" height="30"/>
+                                <rect key="frame" x="18" y="138" width="340" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="wSB-bc-ZgN"/>
                                 </constraints>
@@ -53,7 +37,7 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" placeholder="color" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="X5g-gu-sC5">
-                                <rect key="frame" x="18" y="233" width="340" height="30"/>
+                                <rect key="frame" x="18" y="189" width="340" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="fia-Pg-OQw"/>
                                 </constraints>
@@ -62,7 +46,7 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" verticalCompressionResistancePriority="751" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" placeholder="temperature" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Fvh-7W-1pQ">
-                                <rect key="frame" x="18" y="328" width="340" height="30"/>
+                                <rect key="frame" x="18" y="284" width="340" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="Lqp-KP-iVv"/>
                                 </constraints>
@@ -82,7 +66,7 @@
                                 </connections>
                             </button>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" placeholder="flavor" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="gJr-47-4he">
-                                <rect key="frame" x="18" y="280" width="340" height="30"/>
+                                <rect key="frame" x="18" y="236" width="340" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="xSQ-9N-ivr"/>
                                 </constraints>
@@ -133,7 +117,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XBD-4g-Iyd" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3361" y="135"/>
+            <point key="canvasLocation" x="2503" y="134"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="SFh-Mk-36c">
@@ -143,9 +127,6 @@
                         <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
-                    <connections>
-                        <segue destination="pLs-wf-q5B" kind="relationship" relationship="rootViewController" id="PGe-Or-I7S"/>
-                    </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vS6-fB-9rN" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -160,7 +141,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="100" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" translatesAutoresizingMaskIntoConstraints="NO" id="hLb-D9-pPf">
-                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
                                 <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="IceCreamCell" rowHeight="100" id="ixC-dt-Nc0" customClass="IceCreamTableViewCell" customModule="IceCreamFactory" customModuleProvider="target">
