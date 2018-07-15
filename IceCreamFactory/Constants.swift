@@ -13,4 +13,5 @@ class Constants{
 	public static let QUERY_CHILD = "name"
 	public static let ICECREAM_SEGUE = "IceCreamSegue"
 	public static let CELL_ID = "IceCreamCell"
+	public static let APP_TITLE = "Ice Cream Factory"
 }

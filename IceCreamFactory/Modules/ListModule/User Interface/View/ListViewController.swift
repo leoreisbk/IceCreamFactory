@@ -26,6 +26,7 @@ class ListViewController: UIViewController, ListViewInterface {
 extension ListViewController {
 	override func viewDidLoad() {
 		super.viewDidLoad()
+		self.title = Constants.APP_TITLE
 	}
 
 	override func viewWillAppear(_ animated: Bool) {
