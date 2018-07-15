@@ -23,7 +23,8 @@ class ListInteractor: NSObject, ListInteractorInput {
 
 	func fetchIceCreamItems() {
 		reference = Database.database().reference(withPath: Constants.PATH)
-		reference?.queryOrdered(byChild: Constants.QUERY_CHILD).observe(.value, with: { snapshot in
+		reference?.observe(.value, with: { snapshot in
+//		reference?.queryOrdered(byChild: Constants.PATH).observe(.value, with: { snapshot in
 			var newItems: [IceCreamItem] = []
 			for child in snapshot.children {
 				if let snapshot = child as? DataSnapshot,
@@ -33,6 +34,8 @@ class ListInteractor: NSObject, ListInteractorInput {
 			}
 			self.output?.iceCreamItemsFetched(newItems)
 		})
+
+
 	}
 
 }
