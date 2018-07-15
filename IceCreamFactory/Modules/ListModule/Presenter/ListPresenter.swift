@@ -17,11 +17,15 @@ class ListPresenter: NSObject {
 // MARK: ListModuleInterface
 
 extension ListPresenter: ListModuleInterface {
-	func addNewEntry() {
+	func editItem(_ item: IceCreamItem) {
+		listWireframe?.presentEditInterface(item: item)
+	}
+
+	func addNewItem() {
 		listWireframe?.presentAddInterface()
 	}
 
-	func updateView() {
+	func reloadView() {
 		listInteractor?.fetchIceCreamItems()
 	}
 }
@@ -34,7 +38,7 @@ extension ListPresenter: AddItemModuleDelegate {
 	}
 
 	func addModuleDidSaveAddAction() {
-		updateView()
+		reloadView()
 	}
 }
 

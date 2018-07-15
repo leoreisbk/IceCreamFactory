@@ -30,7 +30,7 @@ extension ListViewController {
 
 	override func viewWillAppear(_ animated: Bool) {
 		super.viewWillAppear(animated)
-		eventHandler?.updateView()
+		eventHandler?.reloadView()
 	}
 }
 
@@ -51,7 +51,9 @@ extension ListViewController: UITableViewDataSource, UITableViewDelegate {
 	func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
 		tableView.deselectRow(at: indexPath, animated: true)
 		let iceCreamItem = items[indexPath.row]
-		self.performSegue(withIdentifier: Constants.ICECREAM_SEGUE, sender: iceCreamItem)
+		eventHandler?.editItem(iceCreamItem)
+
+//		self.performSegue(withIdentifier: Constants.ICECREAM_SEGUE, sender: iceCreamItem)
 	}
 
 	func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
@@ -69,7 +71,7 @@ extension ListViewController: UITableViewDataSource, UITableViewDelegate {
 // MARK: Actions
 extension ListViewController {
 	@IBAction func addButtonDidTouch(_ sender: AnyObject) {
-		eventHandler?.addNewEntry()
+		eventHandler?.addNewItem()
 //		self.performSegue(withIdentifier: Constants.ICECREAM_SEGUE, sender: -1)
 	}
 }

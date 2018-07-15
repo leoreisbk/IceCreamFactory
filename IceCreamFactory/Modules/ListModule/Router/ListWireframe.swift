@@ -25,7 +25,11 @@ class ListWireframe: NSObject {
 	}
 
 	func presentAddInterface() {
-		addWireframe?.presentAddInterfaceFromViewController(listViewController!)
+		addWireframe?.presentAddInterfaceFromViewController(listViewController!, item: nil)
+	}
+
+	func presentEditInterface(item: IceCreamItem) {
+		addWireframe?.presentAddInterfaceFromViewController(listViewController!, item: item)
 	}
 
 	func listViewControllerFromStoryboard() -> ListViewController {

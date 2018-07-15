@@ -9,8 +9,8 @@
 import UIKit
 
 protocol ListModuleInterface {
-	func addNewEntry()
-	func updateView()
-//	func reloadView()
+	func addNewItem()
+	func reloadView()
+	func editItem(_ item: IceCreamItem)
 }
 

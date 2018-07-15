@@ -14,9 +14,12 @@ class AddItemWireframe: NSObject {
 	var addPresenter : AddItemPresenter?
 	var presentedViewController : UIViewController?
 
-	func presentAddInterfaceFromViewController(_ viewController: UIViewController) {
+	func presentAddInterfaceFromViewController(_ viewController: UIViewController, item: IceCreamItem?) {
 		let newViewController = addViewController()
 		newViewController.eventHandler = addPresenter
+		if let item = item {
+			newViewController.iceCreamItem = item
+		}
 		viewController.present(newViewController, animated: true, completion: nil)
 
 		presentedViewController = newViewController
