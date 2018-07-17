@@ -44,6 +44,5 @@ class AppDependencies {
 		addPresenter.addWireframe = addWireframe
 		addPresenter.addModuleDelegate = listPresenter
 		addPresenter.addInteractor = addInteractor
-
 	}
 }

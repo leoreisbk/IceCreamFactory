@@ -28,10 +28,12 @@ PODS:
     - nanopb/encode (= 0.3.8)
   - nanopb/decode (0.3.8)
   - nanopb/encode (0.3.8)
+  - SDStateTableView (0.0.2)
 
 DEPENDENCIES:
   - Firebase/Core
   - Firebase/Database
+  - SDStateTableView
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
@@ -43,6 +45,7 @@ SPEC REPOS:
     - GoogleToolboxForMac
     - leveldb-library
     - nanopb
+    - SDStateTableView
 
 SPEC CHECKSUMS:
   Firebase: d66f4f29c23f22d96808d9abc174d81d8eee968f
@@ -53,7 +56,8 @@ SPEC CHECKSUMS:
   GoogleToolboxForMac: 91c824d21e85b31c2aae9bb011c5027c9b4e738f
   leveldb-library: 08cba283675b7ed2d99629a4bc5fd052cd2bb6a5
   nanopb: 5601e6bca2dbf1ed831b519092ec110f66982ca3
+  SDStateTableView: 59b560e09fcb91dba6ce420744927343c7447ba2
 
-PODFILE CHECKSUM: 684bbdd37a050b76d6994b4e6b03379dab4d8ab6
+PODFILE CHECKSUM: 076324b0dca655f0233350756456254bf9d77114
 
 COCOAPODS: 1.5.3

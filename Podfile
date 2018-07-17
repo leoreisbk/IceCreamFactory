@@ -8,6 +8,7 @@ target 'IceCreamFactory' do
   # Pods for IceCreamFactory
   pod 'Firebase/Core'
   pod 'Firebase/Database'
+  pod 'SDStateTableView'
 
   target 'IceCreamFactoryTests' do
     inherit! :search_paths
